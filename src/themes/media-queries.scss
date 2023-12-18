@@ -1,0 +1,20 @@
+@mixin sm-screen {
+  @media only screen and (30.0625em <= width <= 48em) {
+    @content;
+  }
+}
+@mixin md-screen {
+  @media only screen and (48.0625em <= width <= 64em) {
+    @content;
+  }
+}
+@mixin lg-screen {
+  @media only screen and (64.0625em <= width <= 75em) {
+    @content;
+  }
+}
+@mixin xlg-screen {
+  @media only screen and (75.0625em <= width) {
+    @content;
+  }
+}

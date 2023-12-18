@@ -1,0 +1,24 @@
+@use "../themes/media-queries.scss" as *;
+
+.el {
+  background-color: yellow;
+  p {
+    font-weight: 400;
+  }
+  @include sm-screen {
+    background-color: rgb(16, 53, 102);
+    width: 80%;
+  }
+  @include md-screen {
+    background-color: rgb(109, 96, 96);
+    width: 60%;
+  }
+  @include lg-screen {
+    background-color: rgb(122, 0, 128);
+    width: 40%;
+  }
+  @include xlg-screen {
+    background-color: rgb(195, 236, 222);
+    width: 20%;
+  }
+}

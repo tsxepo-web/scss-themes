@@ -1,0 +1,27 @@
+.el {
+  background-color: yellow;
+}
+@media only screen and (481px <= width <= 768px) {
+  .el {
+    background-color: rgb(16, 53, 102);
+    width: 80%;
+  }
+}
+@media only screen and (769px <= width <= 1024px) {
+  .el {
+    background-color: rgb(0, 0, 0);
+    width: 60%;
+  }
+}
+@media only screen and (1025px <= width <= 1200px) {
+  .el {
+    background-color: rgb(122, 0, 128);
+    width: 40%;
+  }
+}
+@media only screen and (1201px <= width) {
+  .el {
+    background-color: rgb(195, 236, 222);
+    width: 20%;
+  }
+}/*# sourceMappingURL=app.component.css.map */
