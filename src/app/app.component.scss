@@ -1,24 +1,132 @@
 @use "../themes/media-queries.scss" as *;
+@use "../themes/wrapper.scss" as *;
+@use "../themes/colors.scss" as *;
+@use "../themes/font-style.scss" as *;
 
-.el {
-  background-color: yellow;
-  p {
-    font-weight: 400;
+.center-link {
+  align-self: center;
+  padding: 1rem 3rem;
+  text-align: center;
+}
+.border {
+  border: 1px solid $gray;
+  border-radius: 20px;
+  &:hover {
+    border: 1px solid $black;
   }
-  @include sm-screen {
-    background-color: rgb(16, 53, 102);
-    width: 80%;
+}
+.padding {
+  padding: 1rem 0 1rem 2rem;
+}
+.padding-top {
+  padding-top: 2rem;
+}
+
+header {
+  background: $white;
+  max-width: 30rem;
+  margin-bottom: 1rem;
+  .navbar {
+    display: flex;
   }
-  @include md-screen {
-    background-color: rgb(109, 96, 96);
-    width: 60%;
+  .logo {
+    margin: 1rem 0 0 1rem;
+    width: 6rem;
   }
-  @include lg-screen {
-    background-color: rgb(122, 0, 128);
-    width: 40%;
+  .hamburger {
+    margin-left: auto;
+    width: 5%;
+    height: 20px;
+    align-self: center;
+    padding-right: 0.5rem;
+    #checkbox_toggle {
+      display: none;
+    }
   }
-  @include xlg-screen {
-    background-color: rgb(195, 236, 222);
-    width: 20%;
+  .close__menu {
+    width: 10%;
+    display: flex;
+    align-self: flex-end;
+    margin: 1rem 1rem 0 0;
   }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: $white;
+    width: 15rem;
+    height: 100%;
+    left: 50%;
+  }
+  .link {
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: $gray;
+    &:hover {
+      color: $black;
+    }
+  }
+  .dropdown__links {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0.5rem 3.5rem;
+    gap: 1rem;
+    img {
+      padding-right: 0.2rem;
+    }
+  }
+  .icon {
+    width: 1rem;
+  }
+  .svgs {
+    width: 1.25rem;
+  }
+}
+
+.container {
+  // position: relative;
+  max-width: 30rem;
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+}
+.hero__title {
+  @include wrap(80%);
+  @include font-style(2.5rem, 700, $black);
+  padding: 2rem 0 0.5rem 0;
+}
+.hero__desc {
+  @include wrap(80%);
+  @include font-style(1.125rem, 500, $gray);
+  padding-bottom: 2rem;
+  line-height: 1.5;
+}
+.hero__btn {
+  @include font-style(1rem, normal, $white);
+  background: $black;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  align-self: center;
+  margin-bottom: 3.5rem;
+  &:hover {
+    background: $white;
+    color: $black;
+    border: 1px solid black;
+  }
+}
+.logos {
+  @include wrap(90%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logos img {
+  width: 20%;
+}
+.logos img:nth-child(1) {
+  height: 20px;
+}
+.logos img:nth-child(2) {
+  width: 15%;
 }

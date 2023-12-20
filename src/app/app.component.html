@@ -1,8 +1,112 @@
-<div class="el">
-  <h1>Lorem ipsum dolor sit amet.</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate saepe
-    vero incidunt velit provident magnam, in sequi, quia totam a corporis
-    deleniti error ullam dolor sunt aperiam illo facere eaque!
-  </p>
+<header>
+  <nav class="navbar">
+    <div class="logo"><img src="../assets/images/logo.svg" alt="" /></div>
+    <div class="hamburger">
+      <input type="checkbox" id="checkbox_toggle" (click)="toggleMenu()" />
+      <label for="checkbox_toggle" class="hamburger"
+        ><img src="../assets/images/icon-menu.svg" alt=""
+      /></label>
+    </div>
+    <div class="menu" *ngIf="isMenuVisible">
+      <div class="close__menu" (click)="toggleMenu()">
+        <img src="../assets/images/icon-close-menu.svg" alt="" />
+      </div>
+      <div class="dropdown">
+        <button class="link padding" (click)="toggleDropdown(1)">
+          Features
+          <img
+            class="icon"
+            [src]="
+              isDropdownOpen(1)
+                ? '../assets/images/icon-arrow-up.svg'
+                : '../assets/images/icon-arrow-down.svg'
+            "
+            alt="icon-arrow-up"
+          />
+        </button>
+        <div class="dropdown__menu" *ngIf="isDropdownOpen(1)">
+          <div class="dropdown__links">
+            <a href="./" class="link">
+              <img class="svgs" src="../assets/images/icon-todo.svg" alt="" />
+              Todo List</a
+            >
+            <a href="./" class="link">
+              <img
+                class="svgs"
+                src="../assets/images/icon-calendar.svg"
+                alt=""
+              />
+              Calendar</a
+            >
+            <a href="./" class="link">
+              <img
+                class="svgs"
+                src="../assets/images/icon-reminders.svg"
+                alt=""
+              />
+              Reminders</a
+            >
+            <a href="./" class="link">
+              <img
+                class="svgs"
+                src="../assets/images/icon-planning.svg"
+                alt=""
+              />
+              Planning</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="link padding" (click)="toggleDropdown(2)">
+          Company
+          <img
+            class="icon"
+            [src]="
+              isDropdownOpen(2)
+                ? '../assets/images/icon-arrow-up.svg'
+                : '../assets/images/icon-arrow-down.svg'
+            "
+            alt="icon-arrow-up"
+          />
+        </button>
+        <div class="dropdown__menu" *ngIf="isDropdownOpen(2)">
+          <div class="dropdown__links">
+            <a href="./" class="link">History</a>
+            <a href="./" class="link">Our Team</a>
+            <a href="./" class="link">Blog</a>
+          </div>
+        </div>
+      </div>
+      <li class="link padding"><a href="./">Careers</a></li>
+      <li class="link padding"><a href="./">About</a></li>
+      <li class="link center-link padding-top"><a href="./">Login</a></li>
+      <li class="link border center-link">
+        <a href="./">Register</a>
+      </li>
+    </div>
+  </nav>
+</header>
+<div class="container">
+  <div class="hero__img-container">
+    <img
+      class="hero__img"
+      src="../assets/images/image-hero-mobile.png"
+      alt=""
+    />
+  </div>
+  <div class="hero__content">
+    <h1 class="hero__title">Make remote work</h1>
+    <p class="hero__desc">
+      Get your team in sync, no matter your location. Streamline processes,
+      create team rituals, and watch productivity soar.
+    </p>
+    <button class="hero__btn">Learn more</button>
+    <div class="logos">
+      <img src="../assets/images/client-databiz.svg" alt="" />
+      <img src="../assets/images/client-audiophile.svg" alt="" />
+      <img src="../assets/images/client-meet.svg" alt="" />
+      <img src="../assets/images/client-maker.svg" alt="" />
+    </div>
+  </div>
 </div>
