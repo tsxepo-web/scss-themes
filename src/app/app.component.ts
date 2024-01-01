@@ -16,6 +16,25 @@ export class AppComponent {
   isMenuVisible = false;
   openDropdownIndex: number | null = null;
 
+  constructor(private el: ElementRef) {}
+
+  @HostListener('window:click', ['event'])
+  clickout(event: MouseEvent) {
+    if (!this.el.nativeElement.contains(event)) {
+      console.log('clicked');
+      this.closeDropdown();
+    }
+  }
+
+  @HostListener('window:keydown.escape', ['event'])
+  onEscape(event: KeyboardEvent) {
+    this.closeDropdown();
+  }
+
+  closeDropdown() {
+    this.openDropdownIndex = null;
+  }
+
   toggleMenu() {
     this.isMenuVisible = !this.isMenuVisible;
   }

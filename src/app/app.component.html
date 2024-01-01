@@ -1,112 +1,164 @@
 <header>
-  <nav class="navbar">
-    <div class="logo"><img src="../assets/images/logo.svg" alt="" /></div>
-    <div class="hamburger">
-      <input type="checkbox" id="checkbox_toggle" (click)="toggleMenu()" />
-      <label for="checkbox_toggle" class="hamburger"
-        ><img src="../assets/images/icon-menu.svg" alt=""
-      /></label>
-    </div>
-    <div class="menu" *ngIf="isMenuVisible">
-      <div class="close__menu" (click)="toggleMenu()">
-        <img src="../assets/images/icon-close-menu.svg" alt="" />
-      </div>
-      <div class="dropdown">
-        <button class="link padding" (click)="toggleDropdown(1)">
+  <div>
+    <button class="nav-toggle" (click)="toggleMenu()">
+      <span class="hamburger"
+        ><img src="../assets/images/icon-menu.svg" alt="hamburger menu"
+      /></span>
+    </button>
+  </div>
+  <a class="logo" href="./"
+    ><img src="../assets/images/logo.svg" alt="snap "
+  /></a>
+  <nav class="nav" [class.nav--visible]="isMenuVisible">
+    <img
+      class="icon__menu"
+      (click)="toggleMenu()"
+      src="../assets/images/icon-close-menu.svg"
+      alt=""
+    />
+    <ul class="nav__list nav__list--left">
+      <li class="nav__item">
+        <button
+          class="nav__link"
+          (click)="toggleDropdown(1); $event.stopPropagation()"
+        >
           Features
           <img
-            class="icon"
+            class="arrow__icon"
             [src]="
               isDropdownOpen(1)
                 ? '../assets/images/icon-arrow-up.svg'
                 : '../assets/images/icon-arrow-down.svg'
             "
-            alt="icon-arrow-up"
+            alt=""
           />
         </button>
-        <div class="dropdown__menu" *ngIf="isDropdownOpen(1)">
-          <div class="dropdown__links">
-            <a href="./" class="link">
-              <img class="svgs" src="../assets/images/icon-todo.svg" alt="" />
-              Todo List</a
+        <ul class="dropdown" *ngIf="isDropdownOpen(1)">
+          <li>
+            <a class="dropdown__link" href="./"
+              ><img
+                src="../assets/images/icon-todo.svg"
+                alt=""
+                class="icon"
+              />Todo List</a
             >
-            <a href="./" class="link">
-              <img
-                class="svgs"
+          </li>
+          <li>
+            <a class="dropdown__link" href="./"
+              ><img
                 src="../assets/images/icon-calendar.svg"
                 alt=""
-              />
-              Calendar</a
+                class="icon"
+              />Calendar</a
             >
-            <a href="./" class="link">
-              <img
-                class="svgs"
+          </li>
+          <li>
+            <a class="dropdown__link" href="./"
+              ><img
                 src="../assets/images/icon-reminders.svg"
                 alt=""
-              />
-              Reminders</a
+                class="icon"
+              />Reminders</a
             >
-            <a href="./" class="link">
-              <img
-                class="svgs"
+          </li>
+          <li>
+            <a class="dropdown__link" href="./"
+              ><img
                 src="../assets/images/icon-planning.svg"
                 alt=""
-              />
-              Planning</a
+                class="icon"
+              />Planning</a
             >
-          </div>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="link padding" (click)="toggleDropdown(2)">
+          </li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <button
+          class="nav__link"
+          (click)="toggleDropdown(2); $event.stopPropagation()"
+        >
           Company
           <img
-            class="icon"
+            class="arrow__icon"
             [src]="
               isDropdownOpen(2)
                 ? '../assets/images/icon-arrow-up.svg'
                 : '../assets/images/icon-arrow-down.svg'
             "
-            alt="icon-arrow-up"
+            alt=""
           />
         </button>
-        <div class="dropdown__menu" *ngIf="isDropdownOpen(2)">
-          <div class="dropdown__links">
-            <a href="./" class="link">History</a>
-            <a href="./" class="link">Our Team</a>
-            <a href="./" class="link">Blog</a>
-          </div>
-        </div>
-      </div>
-      <li class="link padding"><a href="./">Careers</a></li>
-      <li class="link padding"><a href="./">About</a></li>
-      <li class="link center-link padding-top"><a href="./">Login</a></li>
-      <li class="link border center-link">
-        <a href="./">Register</a>
+        <ul class="dropdown dropdown--company" *ngIf="isDropdownOpen(2)">
+          <li>
+            <a class="dropdown__link" href="./">History</a>
+          </li>
+          <li>
+            <a class="dropdown__link" href="./">Our Team</a>
+          </li>
+          <li>
+            <a class="dropdown__link" href="./">Blog</a>
+          </li>
+        </ul>
       </li>
-    </div>
+      <li class="nav__item"><button class="nav__link">Careers</button></li>
+      <li class="nav__item"><button class="nav__link">About</button></li>
+    </ul>
+    <ul class="nav__list nav__list--right">
+      <li class="nav__item nav__item--center">
+        <button class="nav__link">Login</button>
+      </li>
+      <li class="nav__item nav__item--center">
+        <button class="nav__link nav__link--btn">Register</button>
+      </li>
+    </ul>
   </nav>
 </header>
-<div class="container">
-  <div class="hero__img-container">
-    <img
-      class="hero__img"
-      src="../assets/images/image-hero-mobile.png"
-      alt=""
-    />
-  </div>
-  <div class="hero__content">
-    <h1 class="hero__title">Make remote work</h1>
-    <p class="hero__desc">
-      Get your team in sync, no matter your location. Streamline processes,
-      create team rituals, and watch productivity soar.
-    </p>
-    <button class="hero__btn">Learn more</button>
-    <div class="logos">
-      <img src="../assets/images/client-databiz.svg" alt="" />
-      <img src="../assets/images/client-audiophile.svg" alt="" />
-      <img src="../assets/images/client-meet.svg" alt="" />
-      <img src="../assets/images/client-maker.svg" alt="" />
+
+<section class="hero">
+  <div class="row">
+    <div class="hero__text">
+      <h1 class="hero__title">
+        Make <span><br />remote work </span>
+      </h1>
+      <p>
+        Get your team in synch, no matter your location. Streamline processes,
+        create teams rituals, and watch productivity sour.
+      </p>
+      <a href="./" class="hero__btn">Learn more</a>
+      <div class="hero__icons">
+        <img
+          class="hero__icon"
+          src="../assets/images/client-databiz.svg"
+          alt="databiz"
+        />
+        <img
+          class="hero__icon"
+          src="../assets/images/client-audiophile.svg"
+          alt="audiophile"
+        />
+        <img
+          class="hero__icon"
+          src="../assets/images/client-meet.svg"
+          alt="meet"
+        />
+        <img
+          class="hero__icon"
+          src="../assets/images/client-maker.svg"
+          alt="maker"
+        />
+      </div>
+    </div>
+    <div class="hero__image">
+      <img
+        class="hero__image--mobile"
+        src="../assets/images/image-hero-mobile.png"
+        alt="hero image"
+      />
+      <img
+        class="hero__image--desktop"
+        src="../assets/images/image-hero-desktop.png"
+        alt="hero image"
+      />
     </div>
   </div>
-</div>
+</section>
