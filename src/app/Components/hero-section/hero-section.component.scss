@@ -1,0 +1,27 @@
+@use "../../../themes/colors.scss" as *;
+
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  // background: url("../../../assets/images/bg-tablet-pattern.svg");
+  // background-repeat: no-repeat;
+  // background-position: left 5em bottom 20em;
+  // background-size: cover;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.hero-text p {
+}
+
+.hero-btn {
+  background-color: $brightRed;
+  color: $veryPaleRed;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  align-self: center;
+}

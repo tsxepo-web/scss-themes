@@ -1,0 +1,39 @@
+@use "../../../themes/colors.scss" as *;
+.main-text {
+  margin: 0 auto;
+  width: 80%;
+}
+.main-text h2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+.main-text p {
+  font-size: 0.7rem;
+}
+.col {
+  gap: 1rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.col-heading {
+  display: flex;
+  background-color: $veryPaleRed;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.col-heading h3 {
+  padding: 0;
+  font-size: 0.8rem;
+}
+.col p {
+  font-size: 0.7rem;
+}
+span {
+  // border: 1px solid black;
+  border-radius: 20px;
+  background-color: $brightRed;
+  color: $veryLightGray;
+  padding: 0.1rem 1rem;
+  align-self: center;
+}

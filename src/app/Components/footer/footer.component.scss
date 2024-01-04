@@ -1,0 +1,69 @@
+@use "../../../themes/wrapper.scss" as *;
+@use "../../../themes/colors.scss" as *;
+.row {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: $veryDarkBlue;
+  padding: 3rem 0;
+  gap: 1.5rem;
+}
+.row img {
+  width: 8rem;
+  align-self: center;
+  order: 2;
+  filter: contrast(20%);
+}
+.socials {
+  order: 2;
+  display: flex;
+  justify-content: space-between;
+  color: $veryLightGray;
+  @include wrap(80%);
+}
+.socials i {
+  &:hover {
+    color: $brightRed;
+  }
+}
+
+.links {
+  order: 2;
+  display: flex;
+  gap: 2rem;
+  font-size: 0.6rem;
+  color: $veryLightGray;
+  @include wrap(70%);
+}
+.links li {
+  padding-top: 0.5rem;
+}
+.links li a {
+  color: $veryLightGray;
+  &:hover {
+    color: $brightRed;
+  }
+}
+.email-input {
+  @include wrap(85%);
+  order: 5;
+}
+.email-input input {
+  border-radius: 20px;
+  padding: 0.3rem;
+  width: 60%;
+  color: $brightRed;
+}
+.email-input p {
+  color: $brightRed;
+}
+.email-input button {
+  background-color: $brightRed;
+  border-radius: 10px;
+  padding: 0.3rem 0.5rem;
+  margin-left: 0.2rem;
+}
+.copywrite {
+  order: 1;
+  align-self: center;
+  font-size: 0.5rem;
+}

@@ -1,0 +1,33 @@
+<footer class="row">
+  <img src="../../../assets/images/logo.svg" alt="" />
+  <div class="socials">
+    <i class="fa-brands fa-square-facebook fa-2x"></i>
+    <i class="fa-brands fa-youtube fa-2x"></i>
+    <i class="fa-brands fa-twitter fa-2x"></i>
+    <i class="fa-brands fa-pinterest fa-2x"></i>
+    <i class="fa-brands fa-instagram fa-2x"></i>
+  </div>
+  <div class="links">
+    <ul>
+      <li><a href="./">Home</a></li>
+      <li><a href="./">Pricing</a></li>
+      <li><a href="./">Product</a></li>
+      <li><a href="./">About Us</a></li>
+    </ul>
+    <ul>
+      <li><a href="./">Careers</a></li>
+      <li><a href="./">Community</a></li>
+      <li><a href="./">Privacy Policy</a></li>
+    </ul>
+  </div>
+  <div class="email-input" [formGroup]="profileForm">
+    <input
+      type="email"
+      placeholder="Update your inbox..."
+      formControlName="email"
+    />
+    <button>Go</button>
+    <p *ngIf="profileForm.get('email')?.errors">please enter a valid email</p>
+  </div>
+  <p class="copywrite">Copywrite 2020. All Rights Reserved</p>
+</footer>

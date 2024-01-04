@@ -1,16 +1,17 @@
-$font: "Epilogue";
-$file1: "./assets/fonts/Epilogue-Medium";
-$file2: "./assets/fonts/Epilogue-Bold";
+$bevietnam-font-path: "./assets/fonts";
 
 @font-face {
-  font-family: $font;
-  src: url($file1 + ".woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
+  src: url("#{$bevietnam-font-path}/BeVietnamPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-family: "Be Vietnam Pro";
 }
 @font-face {
-  font-family: $font;
-  src: url($file2 + ".woff2") format("woff2");
+  src: url("#{$bevietnam-font-path}/BeVietnamPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-family: "Be Vietnam Pro";
+}
+@font-face {
+  src: url("#{$bevietnam-font-path}/BeVietnamPro-Bold.woff2") format("woff2");
   font-weight: 700;
-  font-style: normal;
+  font-family: "Be Vietnam Pro";
 }

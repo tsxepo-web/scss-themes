@@ -1,0 +1,24 @@
+@use "../../../themes/colors.scss" as *;
+
+.call-to-action {
+  background: url(../../../assets/images/bg-simplify-section-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: $brightRed;
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.call-to-action h2 {
+  width: 80%;
+  padding-bottom: 2rem;
+  color: $veryLightGray;
+}
+
+.call-to-action a {
+  background-color: $veryLightGray;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}

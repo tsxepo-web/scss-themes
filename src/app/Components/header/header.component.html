@@ -1,0 +1,21 @@
+<header>
+  <div class="logo">
+    <img src="../../../assets/images/logo.svg" alt="" />
+  </div>
+  <img
+    class="hamburger"
+    src="../../../assets/images/icon-hamburger.svg"
+    alt=""
+    (click)="toggleMenu()"
+  />
+  <nav class="nav" [class.nav--visible]="isMenuVisible">
+    <ul class="nav-menu">
+      <li><a href="./">Pricing</a></li>
+      <li><a href="./">Product</a></li>
+      <li><a href="./">About Us</a></li>
+      <li><a href="./">Careers</a></li>
+      <li><a href="./">Community</a></li>
+    </ul>
+    <a href="./" class="header-btn">Get Started</a>
+  </nav>
+</header>
